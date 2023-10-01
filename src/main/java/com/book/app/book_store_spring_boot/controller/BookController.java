@@ -27,6 +27,11 @@ public class BookController {
     public String addBook(){
         return "add_book";
     }
+    @PostMapping("/save")
+    public String addBook(@ModelAttribute book b){
+        service.saveBook(b);
+        return "redirect:all_books";
+    }
     @GetMapping("/all_books")
     public ModelAndView allBooks(){
         List<book> list=service.getAllBooks();
@@ -39,17 +44,5 @@ public class BookController {
     public String about(){
         return "about";
     }
-    @GetMapping("/create_account")
-    public String createAccount(){
-        return "create_account";
-    }
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
-    @PostMapping("/save")
-    public String addBook(@ModelAttribute book b){
-        service.saveBook(b);
-        return "redirect:all_books";
-    }
+
 }
