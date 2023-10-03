@@ -13,17 +13,16 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @Column(name ="userName", unique = true, nullable = false)
+    @Column( unique = true, nullable = false)
     private String userName;
     @Column(nullable = false)
     private String password;
-    @OneToMany(mappedBy = "orders",cascade = CascadeType.ALL)
-    private List<Order> orders;
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    private List<Order> orderList;
 
 }

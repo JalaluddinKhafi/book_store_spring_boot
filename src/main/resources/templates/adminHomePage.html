@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Create Account</title>
+    <title>boook store</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" th:href="@{/img/apple-icon.png}">
@@ -27,36 +27,14 @@
 
 <body>
 <!-- Header -->
-<div th:replace="fragments/topNav::navbar"></div>
+<div th:replace="fragments/topNav :: adminNavbar">
+
+</div>
 <!-- Close Header -->
 
-<div class="container my-5 p-5" style="border: 1px solid black;">
-    <h4 class="text-center">User Register</h4>
-    <form class="col-md-4 offset-md-4" th:action="@{/userRegister}" th:object="${user}" method="post">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
 
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">phone</label>
-            <input type="text" class="form-control" id="phone" name="phone">
 
-        </div>
-        <div class="mb-3">
-            <label for="userName" class="form-label">Username</label>
-            <input type="text" class="form-control" id="userName" name="userName">
 
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="text" class="form-control" id="password" name="password">
-
-        </div>
-
-        <center><button type="submit" class="btn btn-primary">Submit</button></center>
-    </form>
-</div>
 
 <!-- Bootstrap -->
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>

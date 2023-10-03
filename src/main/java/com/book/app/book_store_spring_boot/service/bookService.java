@@ -20,4 +20,10 @@ public class bookService {
     public List<book> getAllBooks(){
     return repository.findAll();
     }
+    public book getBookById(long id){
+        return repository.findById(id).get();
+    }
+    public void deletBookById(long id){
+        repository.deleteById(id);
+    }
 }

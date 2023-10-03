@@ -22,7 +22,7 @@
                         <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{all_books}">Books</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{create_account}">Create Account</a>
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{registeration}">Create Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{login}">Login</a>
@@ -32,4 +32,40 @@
         </div>
     </div>
 </nav>
+</div>
+
+<div th:fragment="adminNavbar">
+    <nav id="admin_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" th:href="@{adminHomePage}">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Book</span> <span class="text-primary h4">Store</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{adminHomePage}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{add_book}">Add Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{admin_all_books}">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{all_users}">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" th:href="@{index}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 </div>

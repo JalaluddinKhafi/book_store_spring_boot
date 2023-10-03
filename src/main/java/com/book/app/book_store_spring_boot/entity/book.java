@@ -13,15 +13,15 @@ import java.util.List;
 @RequiredArgsConstructor
 public class book {
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long book_id;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
     private String author;
     @Column(nullable = false)
     private int price;
-    @OneToMany(mappedBy = "books", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)
     private List<OrderItem> orderItems;
 
 }

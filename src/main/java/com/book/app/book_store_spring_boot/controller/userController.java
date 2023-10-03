@@ -33,7 +33,7 @@ userService service;
         User user = service.findBuyUsername(username);
 
         if (user != null && user.getPassword().equals(password)) {
-            return "redirect:index";
+            return "redirect:adminHomePage";
         } else {
             model.addAttribute("error", "Invalid username or password");
 
